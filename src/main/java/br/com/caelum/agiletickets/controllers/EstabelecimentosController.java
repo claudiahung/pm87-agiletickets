@@ -32,7 +32,7 @@ public class EstabelecimentosController {
 		this.validator = validator;
 		this.diretorio = diretorio;
 	}
-
+  
 	@Get("/estabelecimentos")
 	public List<Estabelecimento> lista() {
 		return diretorio.todos();
@@ -49,7 +49,5 @@ public class EstabelecimentosController {
 		result.redirectTo(this).lista();
 	}
 
-	private boolean ehbranco(String a) {
-		return Strings.isNullOrEmpty(a);
-	}
+	
 }
